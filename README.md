@@ -1,31 +1,20 @@
 [<img width="134" src="https://vk.com/images/apps/mini_apps/vk_mini_apps_logo.svg">](https://vk.com/services)
 
-# Create VK Mini App [![npm][npm]][npm-url] [![deps][deps]][deps-url]
+# Momentum
 
-## How to install
+[![npm][npm]][npm-url] [![deps][deps]][deps-url]
+[![MIT Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1bea4ea2c2ef42a9a39ffde4c081dbd9)](https://app.codacy.com/manual/MarkSmirnov13/Momentum?utm_source=github.com&utm_medium=referral&utm_content=MarkSmirnov13/Momentum&utm_campaign=Badge_Grade_Dashboard)
+[![Author](https://img.shields.io/badge/author-MarkSmirnov13-lightgrey.svg)](https://github.com/MarkSmirnov13)
+[![Author](https://img.shields.io/badge/author-MaximLukianchuk-lightgrey.svg)](https://github.com/MaximLukianchuk)
 
-### Create VK Mini App with gh-pages deploy
-
-`npx @vkontakte/create-vk-mini-app <app-directory-name>`
-
-### Create VK Mini App with Zeit deploy
-
-Firstly, you have to create Zeit account and connect it with your GitHub profile — https://zeit.co/
-
-`npx @vkontakte/create-vk-mini-app <app-directory-name> --zeit`
-
-### Create VK Mini App with Surge deploy
-
-Firstly, you have to create Surge account and Surge-domain — https://surge.sh/
-
-`npx @vkontakte/create-vk-mini-app <app-directory-name> --surge <surge-domain>`
-
-## How to start work with app
-
-Go to created folder and run:
-`yarn start` || `npm start` — this will start dev server with hot reload on `localhost:10888`.
-
-`yarn run build` || `npm run build` — this will build production bundle, with tree-shaking, uglify and all this modern fancy stuff
+## Quick install
+```
+git clone https://github.com/MarkSmirnov13/Momentum
+cd Momentum
+npm i
+npm start
+```
 
 [npm]: https://img.shields.io/npm/v/@vkontakte/create-vk-mini-app.svg
 [npm-url]: https://npmjs.com/package/@vkontakte/create-vk-mini-app
