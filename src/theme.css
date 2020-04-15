@@ -3,9 +3,13 @@
     --tomato: #df5d33;
     --black: #000;
     --white: #fff;
+    --green: #619c5c;
+    --yellow: #fbdc0a;
+    --blue: #3d3463;
+    --transparent: rgba(255, 255, 255, .7);
 
-    --h1: 65px/68px 'Oswald', sans-serif;
-    --h2: 55px/58px 'Oswald', sans-serif;
+    --h1: 65px/68px 'Open Sans', sans-serif;
+    --h2: 55px/58px 'Open Sans', sans-serif;
     --h3: 45px/48px 'Open Sans', sans-serif;
     --body1: 35px/37px 'Open Sans', sans-serif;
     --body2: 25px/27px 'Open Sans', sans-serif;

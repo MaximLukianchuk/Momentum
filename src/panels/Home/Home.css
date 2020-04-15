@@ -1,8 +1,12 @@
-.text-wrapper {
+.header-wrapper {
     padding-top: 0;
 }
 
-.text-wrapper .home-header {
-    word-spacing: 60px;
-
+.header-wrapper .home-header {
+    word-spacing: 9999px;
 }
+
+.preview-card-wrapper .preview-card {
+    margin: auto;
+}
+

@@ -31,6 +31,7 @@ export const loadEvents = () => dispatch => {
     const events = [
       { name: 'Новый Год', date: new Date(2021, 0, 1) },
       { name: 'Днюха', date: new Date(2020, 9, 2) },
+      { name: 'Примерчик', date: new Date(2020, 3, 15, 18, 41) },
     ]
     
     dispatch(setEvents(events));
