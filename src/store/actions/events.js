@@ -28,11 +28,12 @@ export const loadEvents = () => dispatch => {
   dispatch(setEventsLoadingState(LoadingState.Loading));
   
   setTimeout(() => {
+    
     const events = [
-      { name: 'Новый Год', date: new Date(2021, 0, 1) },
-      { name: 'Днюха', date: new Date(2020, 9, 2) },
-      { name: 'Примерчик', date: new Date(2020, 3, 15, 18, 41) },
-    ]
+      { name: 'Новый Год', date: new Date(2021, 0, 1), type: 'blue-theme' },
+      { name: 'Днюха', date: new Date(2020, 8, 2), type: 'red-theme' },
+      { name: 'Установка приложения', date: new Date(2020, 3, 15, 10, 5), type: 'violet-theme' },
+    ];
     
     dispatch(setEvents(events));
     dispatch(setEventsLoadingState(LoadingState.Loaded));
