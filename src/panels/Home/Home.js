@@ -3,6 +3,8 @@ import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import List from '@vkontakte/vkui/dist/components/List/List';
+import Button from '@vkontakte/vkui/dist/components/Button/Button';
+import Icon28AddOutline from '@vkontakte/icons/dist/28/add_outline';
 // import Separator from '@vkontakte/vkui/dist/components/Separator/Separator';
 
 import Header from '../../components/Header';
@@ -36,6 +38,7 @@ const Home = ({ id, goForward, fetchedEvents }) => {
           ))}
         </List>
       </Group>
+      <Button className='add-button' before={<Icon28AddOutline/>}/>
     </Panel>
   );
 };
