@@ -1,0 +1,53 @@
+.text {
+    display: block;
+}
+
+
+/* color */
+.text.text-softBlue {
+    color: var(--soft-blue);
+}
+
+.text.text-tomato {
+    color: var(--tomato);
+}
+
+.text.text-black {
+    color: var(--black);
+}
+
+.text.text-white {
+    color: var(--black);
+}
+
+
+/* font */
+.text.text-h1 {
+    font: var(--h1);
+}
+
+.text.text-h2 {
+    font: var(--h2);
+}
+
+.text.text-h3 {
+    font: var(--h3);
+}
+
+.text.text-body1 {
+    font: var(--body1);
+}
+
+.text.text-body2 {
+    font: var(--body2);
+}
+
+.text.text-body3 {
+    font: var(--body3);
+}
+
+
+/* font-weight */
+.text.text-bold {
+    font-weight: bold;
+}
