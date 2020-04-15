@@ -11,6 +11,9 @@ import Spotty from './panels/Spotty';
 import { useNavigation } from './hooks/useNavigation';
 import { loadEvents, LoadingState } from './store/actions/events';
 
+import './theme.css';
+import './App.css';
+
 const App = () => {
 	const dispatch = useDispatch();
 	const { events, loadingState } = useSelector(state => state);

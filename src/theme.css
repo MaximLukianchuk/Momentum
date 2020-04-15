@@ -1,0 +1,13 @@
+:root {
+    --soft-blue: #b8cbf7;
+    --tomato: #df5d33;
+    --black: #000;
+    --white: #fff;
+
+    --h1: 65px/68px 'Oswald', sans-serif;
+    --h2: 55px/58px 'Oswald', sans-serif;
+    --h3: 45px/48px 'Open Sans', sans-serif;
+    --body1: 35px/37px 'Open Sans', sans-serif;
+    --body2: 25px/27px 'Open Sans', sans-serif;
+    --body3: 15px/17px 'Open Sans', sans-serif;
+}
