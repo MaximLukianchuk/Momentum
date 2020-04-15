@@ -29,7 +29,11 @@ const Home = ({ id, goForward, fetchedEvents }) => {
           {/*<Cell expandable onClick={goForward} data-to='spotty'>Панель со Спотти</Cell>*/}
   
           {/*<Separator style={{ margin: '12px 0' }} />*/}
-          {fetchedEvents.map(({ name, date }, i) => <Cell className='preview-card-cell' key={`event-${i}`}><PreviewCard name={name} date={date} type='tomato'/></Cell>)}
+          {fetchedEvents.map(({ name, date, type }, i) => (
+            <Cell className='preview-card-cell' key={`event-${i}`}>
+              <PreviewCard name={name} date={date} type={type}/>
+            </Cell>
+          ))}
         </List>
       </Group>
     </Panel>
