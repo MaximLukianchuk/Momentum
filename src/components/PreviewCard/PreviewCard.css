@@ -8,6 +8,16 @@
     padding: 10px;
 }
 
+.date-inline{
+    display: flex;
+    align-items: flex-end;
+}
+
+.date-inline .date-inline-type {
+    margin-bottom: 7px;
+    margin-left: 5px;
+}
+
 
 /* background */
 .preview-card.preview-card-blue-theme {
