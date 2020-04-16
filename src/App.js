@@ -6,8 +6,7 @@ import ScreenSpinner from '@vkontakte/vkui/dist/components/ScreenSpinner/ScreenS
 import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
-import Persik from './panels/Persik';
-import Spotty from './panels/Spotty';
+import Event from './panels/Event';
 import { useNavigation } from './hooks/useNavigation';
 import { loadEvents, LoadingState } from './store/actions/events';
 
@@ -18,18 +17,19 @@ const App = () => {
 	const dispatch = useDispatch();
 	const { events, loadingState } = useSelector(state => state);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
-	const { activePanel, history, goForward, goBack } = useNavigation('home')
-	
+	const { activePanel, history, goForward, goBack } = useNavigation('home');
+	const [currentEventId, setCurrentEventId] = useState(null);
+
 	useEffect(() => {
 		dispatch(loadEvents());
 	}, [dispatch]);
-	
+
 	useEffect(() => {
 		if (loadingState === LoadingState.Loaded) {
 			setPopout(null);
 		}
 	}, [loadingState]);
-	
+
 	return (
 		<ConfigProvider isWebView={true}>
 			<View
@@ -38,12 +38,11 @@ const App = () => {
 				onSwipeBack={goBack}
 				history={history}
 			>
-				<Home id='home' fetchedEvents={events} goForward={goForward} />
-				<Persik id='persik' goBack={goBack} />
-				<Spotty id='spotty' goBack={goBack} />
+				<Home id='home' fetchedEvents={events} goForward={goForward} setEvent={setCurrentEventId} />
+				<Event id='event' goBack={goBack} eventId={currentEventId} />
 			</View>
 		</ConfigProvider>
 	);
-}
+};
 
 export default App;

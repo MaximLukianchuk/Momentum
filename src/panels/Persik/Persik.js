@@ -12,16 +12,16 @@ import './Persik.css';
 const osName = platform();
 
 const Persik = ({ id, goBack }) => (
-  <Panel id={id}>
-    <PanelHeader
-      left={<PanelHeaderButton onClick={goBack} data-to='home'>
-        {osName === IOS ? <Icon28ChevronBack/> : <Icon24Back/>}
-      </PanelHeaderButton>}
-    >
-      Persik
-    </PanelHeader>
-    <img className='Persik' src={persik} alt='Persik The Cat'/>
-  </Panel>
+    <Panel id={id}>
+        <PanelHeader
+          left={<PanelHeaderButton onClick={goBack} data-to='home'>
+            {osName === IOS ? <Icon28ChevronBack/> : <Icon24Back/>}
+          </PanelHeaderButton>}
+        >
+          Persik
+        </PanelHeader>
+        <img className='Persik' src={persik} alt='Persik The Cat'/>
+    </Panel>
 );
 
 export default Persik;
