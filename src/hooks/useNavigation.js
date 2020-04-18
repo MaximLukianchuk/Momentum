@@ -7,12 +7,11 @@ export const useNavigation = initialPanel => {
 
     const goBack = () => {
         const hist = [...history];
+        hist.pop();
         const panel = hist[hist.length - 1];
 
-        hist.pop();
-
         if (panel === initialPanel) {
-          bridge.send('VKWebAppDisableSwipeBack');
+            bridge.send('VKWebAppDisableSwipeBack');
         }
 
         setHistory(hist);

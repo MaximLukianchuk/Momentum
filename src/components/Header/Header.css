@@ -1,0 +1,48 @@
+.header-wrapper {
+    position: relative;
+    height: 150px;
+}
+
+.header-button {
+    position: absolute;
+
+    left: 25px;
+    top: 50%;
+    transform: translate(0, -50%);}
+
+.header-text {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-edit {
+    position: absolute;
+
+    left: 80%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* color */
+.header-wrapper.header-wrapper-white {
+    color: var(--white);
+}
+
+.header-wrapper.header-wrapper-softBlue  {
+    color: var(--soft-blue);
+}
+
+.header-wrapper.header-wrapper-tomato {
+    color: var(--tomato);
+}
+
+.header-wrapper.header-wrapper-black {
+    color: var(--black);
+}
+
+.header-wrapper.header-wrapper-transparent {
+    color: var(--transparent);
+}

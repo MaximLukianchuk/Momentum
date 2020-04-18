@@ -7,6 +7,7 @@ import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
 import Event from './panels/Event';
+import Persik from "./panels/Persik";
 import { useNavigation } from './hooks/useNavigation';
 import { loadEvents, LoadingState } from './store/actions/events';
 
@@ -37,9 +38,11 @@ const App = () => {
 				popout={popout}
 				onSwipeBack={goBack}
 				history={history}
+				header={false}
 			>
 				<Home id='home' fetchedEvents={events} goForward={goForward} setEvent={setCurrentEventId} />
 				<Event id='event' goBack={goBack} eventId={currentEventId} />
+				<Persik id='persik' goBack={goBack} />
 			</View>
 		</ConfigProvider>
 	);

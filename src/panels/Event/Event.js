@@ -1,28 +1,44 @@
 import React from 'react';
-import { platform, IOS } from '@vkontakte/vkui';
+import cn from 'classnames';
+import { compose } from 'recompose';
+import { createSelector } from 'reselect';
+
+import { platform } from '@vkontakte/vkui';
 import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
-import PanelHeader from '@vkontakte/vkui/dist/components/PanelHeader/PanelHeader';
-import PanelHeaderButton from '@vkontakte/vkui/dist/components/PanelHeaderButton/PanelHeaderButton';
-import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
-import Icon24Back from '@vkontakte/icons/dist/24/back';
+import { useSelector } from 'react-redux';
+import { EventCardBase } from '../../components/EventCard/index';
+import {
+    withThemeColumn,
+    withThemeInline,
+    withThemeSquare,
+    withThemeCenter
+} from "../../components/EventCard/_theme/index";
+
+import './Event.css';
+import Header from "../../components/Header/Header";
 
 const osName = platform();
+const selectEvent = eventId => createSelector(
+    state => state.events,
+    events => events.filter(event => event.id === eventId)
+);
+
+const EventCard = compose(
+    withThemeColumn,
+    withThemeInline,
+    withThemeSquare,
+    withThemeCenter
+)(EventCardBase);
 
 const Event = ({ id, goBack, eventId }) => {
-    // console.log('Event', eventId);
+    const [ event ] = useSelector(selectEvent(eventId));
+
     return (
-        <Panel id={id}>
-            <PanelHeader
-                left={
-                    <PanelHeaderButton onClick={goBack} data-to='home'>
-                        { osName === IOS ? <Icon28ChevronBack/> : <Icon24Back/> }
-                    </PanelHeaderButton>
-                }
-            >
-                Event
-            </PanelHeader>
+        <Panel id={id} separator={false} className={cn(['event-panel', `event-panel-${event.type}`])}>
+            <Header osName={osName} goBack={goBack} color='white' edit/>
+            <EventCard {...event}/>
         </Panel>
     );
-}
+};
 
 export default Event;

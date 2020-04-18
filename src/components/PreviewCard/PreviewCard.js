@@ -7,15 +7,14 @@ import { useTimer } from '../../hooks/useTimer';
 import { getReadableDate } from '../../utils/getReadableDate';
 import { getParsedTime } from '../../utils/getParsedTime';
 
-
 import './PreviewCard.css'
 
-const PreviewCard = ({ className, name, date, type }) => {
+const PreviewCard = ({ id, className, name, date, type, onPreviewCardClick }) => {
   const { time, ...moments } = useTimer(date);
   const [amount, dateType] = getParsedTime(moments);
-  
+
   return (
-    <Div className='preview-card-wrapper'>
+    <Div className='preview-card-wrapper' data-to='event' onClick={(e) => onPreviewCardClick(e, id)}>
       <div className={cn(['preview-card', className, `preview-card-${type}`])}>
         <div className='card-event'>
           <Text color='transparent' font='body3'>{time === 'future' ? 'До' : 'C'}</Text>
@@ -23,10 +22,10 @@ const PreviewCard = ({ className, name, date, type }) => {
         </div>
         <div className='card-date'>
           <Text color='transparent' font='body3'>{getReadableDate(date)}</Text>
-          <div className='date-inline'>
-            <Text color='white' font='h3' bold>{amount}</Text>
-            <Text className='date-inline-type' color='transparent' font='body3'>{dateType}</Text>
-          </div>
+            <div className='date-inline'>
+                <Text color='white' font='h3' bold>{amount}</Text>
+                <Text className='date-inline-type' color='transparent' font='body3'>{dateType}</Text>
+            </div>
         </div>
       </div>
     </Div>

@@ -1,9 +1,9 @@
-.header-wrapper {
-    padding-top: 0;
+.header-title-wrapper {
+    padding-top: 100px;
     padding-bottom: 0;
 }
 
-.header-wrapper .home-header {
+.header-title-wrapper .home-header {
     word-spacing: 9999px;
 }
 

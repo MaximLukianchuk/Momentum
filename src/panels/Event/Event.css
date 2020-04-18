@@ -1,0 +1,12 @@
+/* background */
+.Panel.event-panel.event-panel-blue-theme .Panel__in {
+    background-image: url('../../static/blue-theme.jpg');
+}
+
+.Panel.event-panel.event-panel-red-theme .Panel__in {
+    background-image: url('../../static/red-theme.jpg');
+}
+
+.Panel.event-panel.event-panel-violet-theme .Panel__in {
+    background-image: url('../../static/violet-theme.jpg');
+}
