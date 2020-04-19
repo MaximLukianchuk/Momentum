@@ -1,0 +1,19 @@
+.create-event-name-wrapper .create-event-name-title {
+    padding-top: 45%;
+    padding-left: 18px;
+}
+
+.create-event-name-wrapper .create-event-name-input {
+    padding-left: 13px;
+    padding-bottom: 45%;
+    width: 290px;
+}
+
+.create-event-name-wrapper .create-event-name-button {
+    display: block;
+    margin: auto;
+    background-color: var(--black);
+    width: 185px;
+    height: 48px;
+    border-radius: 18px;
+}

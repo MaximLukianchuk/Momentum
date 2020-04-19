@@ -7,6 +7,8 @@ import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
 import Event from './panels/Event';
+import CreateEventName from './panels/CreateEventName';
+import CreateEventDate from './panels/CreateEventDate';
 import { useNavigation } from './hooks/useNavigation';
 import { loadEvents, LoadingState } from './store/actions/events';
 
@@ -41,6 +43,8 @@ const App = () => {
             >
                 <Home id='home' fetchedEvents={events} goForward={goForward} setEvent={setCurrentEventId}/>
                 <Event id='event' goBack={goBack} eventId={currentEventId}/>
+				<CreateEventName id='create_event_name' goForward={goForward} goBack={goBack} />
+				<CreateEventDate id='create_event_date' goForward={goForward} goBack={goBack} />
             </View>
         </ConfigProvider>
     );

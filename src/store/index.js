@@ -1,6 +1,12 @@
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 
 import { eventsReducer } from './reducers/events';
+import { newEventReducer } from './reducers/newEvent';
 import { getMiddleware } from './middleware';
 
-export const getStore = () => createStore(eventsReducer, getMiddleware());
+const rootReducer = combineReducers({
+    events: eventsReducer,
+    newEvent: newEventReducer
+});
+
+export const getStore = () => createStore(rootReducer, getMiddleware());

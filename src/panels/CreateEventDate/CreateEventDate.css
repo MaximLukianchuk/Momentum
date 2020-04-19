@@ -1,0 +1,18 @@
+.create-event-date-wrapper .create-event-date-title {
+    padding-top: 45%;
+    padding-left: 18px;
+}
+
+.create-event-date-wrapper .create-event-date-button {
+    display: block;
+    margin: auto;
+    background-color: var(--black);
+    width: 185px;
+    height: 48px;
+    border-radius: 18px;
+}
+
+.create-event-date-wrapper .datepicker {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
