@@ -15,7 +15,7 @@ const Home = ({ id, goForward, fetchedEvents, setEvent}) => {
     const combineHandlers = (e, id) => {
         goForward(e);
         setEvent(id);
-        bridge.send("VKWebAppTapticImpactOccurred", {"style": "heavy"});
+        bridge.send('VKWebAppTapticImpactOccurred', {'style': 'heavy'});
     };
 
     return (
@@ -31,13 +31,13 @@ const Home = ({ id, goForward, fetchedEvents, setEvent}) => {
             <Group title='Events'>
                 <List>
                     {
-                        fetchedEvents.map(({ id, name, date, type }) => (
+                        fetchedEvents && fetchedEvents.map(({ id, name, date, theme }) => (
                             <PreviewCard
                                 key={`event-${id}`}
                                 id={id}
                                 name={name}
                                 date={date}
-                                type={type}
+                                theme={theme}
                                 onPreviewCardClick={combineHandlers}
                             />
                         ))

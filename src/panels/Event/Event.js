@@ -8,14 +8,14 @@ import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import { useSelector } from 'react-redux';
 import { EventCardBase } from '../../components/EventCard/index';
 import {
-    withThemeColumn,
-    withThemeInline,
-    withThemeSquare,
-    withThemeCenter
-} from "../../components/EventCard/_theme/index";
+    withTypeColumn,
+    withTypeInline,
+    withTypeSquare,
+    withTypeCenter
+} from '../../components/EventCard/_type/index';
 
 import './Event.css';
-import Header from "../../components/Header/Header";
+import Header from '../../components/Header/Header';
 
 const osName = platform();
 const selectEvent = eventId => createSelector(
@@ -24,17 +24,17 @@ const selectEvent = eventId => createSelector(
 );
 
 const EventCard = compose(
-    withThemeColumn,
-    withThemeInline,
-    withThemeSquare,
-    withThemeCenter
+    withTypeColumn,
+    withTypeInline,
+    withTypeSquare,
+    withTypeCenter
 )(EventCardBase);
 
 const Event = ({ id, goBack, eventId }) => {
     const [ event ] = useSelector(selectEvent(eventId));
 
     return (
-        <Panel id={id} separator={false} className={cn(['event-panel', `event-panel-${event.type}`])}>
+        <Panel id={id} separator={false} className={cn(['event-panel', `event-panel-${event.theme}`])}>
             <Header osName={osName} goBack={goBack} color='white' edit/>
             <EventCard {...event}/>
         </Panel>

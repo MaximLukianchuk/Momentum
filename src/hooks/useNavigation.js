@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import bridge from "@vkontakte/vk-bridge";
+import bridge from '@vkontakte/vk-bridge';
 
 export const useNavigation = initialPanel => {
     const [activePanel, setActivePanel] = useState(initialPanel);
