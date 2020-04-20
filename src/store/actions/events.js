@@ -30,10 +30,10 @@ export const loadEvents = () => dispatch => {
   setTimeout(() => {
 
     const events = [
-      { id: 1, name: 'Новый Год', date: new Date(2021, 0, 1), theme: 'blue-theme', type: 'column' },
-      { id: 2, name: 'Днюха', date: new Date(2020, 8, 2), theme: 'red-theme', type: 'inline' },
-      { id: 3, name: 'Установка приложения', date: new Date(2020, 3, 15, 10, 5), theme: 'violet-theme', type: 'square' },
-      { id: 4, name: 'Сел на карантин', date: new Date(2020, 2, 16), theme: 'red-theme', type: 'center' },
+      { id: 1, name: 'Новый Год', date: new Date(2021, 0, 1), theme: 'blue-gradient' },
+      { id: 2, name: 'Днюха', date: new Date(2020, 8, 2), theme: 'red-gradient' },
+      { id: 3, name: 'Установка приложения', date: new Date(2020, 3, 15, 10, 5), theme: 'violet-gradient' },
+      { id: 4, name: 'Сел на карантин', date: new Date(2020, 2, 16), theme: 'red-gradient' },
     ];
 
     dispatch(setEvents(events));

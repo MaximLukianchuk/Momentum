@@ -16,20 +16,20 @@ import './App.css';
 const App = () => {
     const dispatch = useDispatch();
     const { events, loadingState } = useSelector(state => state);
-    const [ popout, setPopout ] = useState(<ScreenSpinner size='large' />);
+    const [popout, setPopout] = useState(<ScreenSpinner size='large'/>);
     const { activePanel, history, goForward, goBack } = useNavigation('home');
-    const [ currentEventId, setCurrentEventId ] = useState(null);
-
+    const [currentEventId, setCurrentEventId] = useState(null);
+    
     useEffect(() => {
         dispatch(loadEvents());
     }, [dispatch]);
-
+    
     useEffect(() => {
         if (loadingState === LoadingState.Loaded) {
             setPopout(null);
         }
     }, [loadingState]);
-
+    
     return (
         <ConfigProvider isWebView={true}>
             <View
@@ -39,8 +39,8 @@ const App = () => {
                 history={history}
                 header={false}
             >
-                <Home id='home' fetchedEvents={events} goForward={goForward} setEvent={setCurrentEventId} />
-                <Event id='event' goBack={goBack} eventId={currentEventId} />
+                <Home id='home' fetchedEvents={events} goForward={goForward} setEvent={setCurrentEventId}/>
+                <Event id='event' goBack={goBack} eventId={currentEventId}/>
             </View>
         </ConfigProvider>
     );

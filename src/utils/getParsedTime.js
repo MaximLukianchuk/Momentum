@@ -7,7 +7,7 @@ export const variants = {
     'days': ['день', 'дня', 'дней'],
 };
 
-export const getParsedTime = (moments, onlyOneMoment = true) => {
+export const getParsedTime = (moments, onlyOneMoment) => {
     const orderedMoments = ['days', 'hours', 'minutes', 'seconds'];
     let key = 'seconds';
 
@@ -18,6 +18,6 @@ export const getParsedTime = (moments, onlyOneMoment = true) => {
         }
     }
 
-    return onlyOneMoment ? [moments[key], decOfNum(moments[key], variants[key]), moments]
-        : moments;
+    return onlyOneMoment ? [moments[key], decOfNum(moments[key], variants[key])]
+        : orderedMoments.reduce((a, v) => ({ ...a, [v]: [moments[v], decOfNum(moments[v], variants[v])]}), {});
 };

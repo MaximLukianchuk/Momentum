@@ -11,13 +11,13 @@ import PreviewCard from '../../components/PreviewCard';
 
 import './Home.css';
 
-const Home = ({ id, goForward, fetchedEvents, setEvent}) => {
+const Home = ({ id, goForward, fetchedEvents, setEvent }) => {
     const combineHandlers = (e, id) => {
         goForward(e);
         setEvent(id);
-        bridge.send('VKWebAppTapticImpactOccurred', {'style': 'heavy'});
+        bridge.send('VKWebAppTapticImpactOccurred', { 'style': 'heavy' });
     };
-
+    
     return (
         <Panel id={id} separator={false}>
             <HeaderTitle

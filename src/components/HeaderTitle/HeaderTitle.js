@@ -9,4 +9,4 @@ const HeaderTitle = ({ className, children, ...props }) => (
   </Div>
 );
 
-export default HeaderTitle
+export default HeaderTitle;

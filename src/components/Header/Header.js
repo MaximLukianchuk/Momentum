@@ -29,4 +29,4 @@ const Header = ({ osName, goBack, color, text, edit }) => {
     )
 };
 
-export default Header
+export default Header;

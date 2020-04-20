@@ -1,7 +1,6 @@
 .event-card-time.event-card-time-column {
     display: flex;
     flex-direction: row;
-
     align-items: center;
 }
 

@@ -5,70 +5,51 @@
 
 .event-card-time.event-card-time-center {
     position: relative;
-
     margin: auto;
 }
 
-/* Изменяем отступ у 'времени' в зависимости от количества букв */
-.event-card-days-after[data-width='3'] {
+.event-card-days-after,
+.event-card-minutes-after,
+.event-card-hours-before,
+.event-card-seconds-before {
     position: absolute;
     align-self: center;
-    right: -51px;
     margin-top: -50px;
+}
+
+/* Изменяем отступ у 'времени' в зависимости от количества символов */
+.event-card-days-after[data-width='3'] {
+    right: -51px;
 }
 
 .event-card-days-after[data-width='4'] {
-    position: absolute;
-    align-self: center;
     right: -68px;
-    margin-top: -50px;
 }
 
 .event-card-minutes-after[data-width='5'] {
-    position: absolute;
-    align-self: center;
     right: -85px;
-    margin-top: -50px;
 }
 
 .event-card-minutes-after[data-width='6'] {
-    position: absolute;
-    align-self: center;
     right: -102px;
-    margin-top: -50px;
 }
 
 .event-card-hours-before[data-width='3'] {
-    position: absolute;
-    align-self: center;
     left: -51px;
-    margin-top: -50px;
 }
 
 .event-card-hours-before[data-width='4'] {
-    position: absolute;
-    align-self: center;
     left: -68px;
-    margin-top: -50px;
 }
 
 .event-card-hours-before[data-width='5'] {
-    position: absolute;
-    align-self: center;
     left: -85px;
-    margin-top: -50px;
 }
 
 .event-card-seconds-before[data-width='6'] {
-    position: absolute;
-    align-self: center;
     left: -102px;
-    margin-top: -50px;
 }
 
 .event-card-seconds-before[data-width='7'] {
-    position: absolute;
-    align-self: center;
     left: -119px;
-    margin-top: -50px;
 }
