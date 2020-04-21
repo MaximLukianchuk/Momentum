@@ -1,0 +1,11 @@
+.event-card-wrapper {
+    margin: 0 50px;
+}
+
+.event-card-wrapper > .text {
+    margin-bottom: 5px;
+}
+
+.event-card-date {
+    margin-top: 50px;
+}

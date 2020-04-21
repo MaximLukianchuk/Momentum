@@ -1,0 +1,55 @@
+.event-card-date.event-card-date-center {
+    display: flex;
+    flex-direction: column;
+}
+
+.event-card-time.event-card-time-center {
+    position: relative;
+    margin: auto;
+}
+
+.event-card-days-after,
+.event-card-minutes-after,
+.event-card-hours-before,
+.event-card-seconds-before {
+    position: absolute;
+    align-self: center;
+    margin-top: -50px;
+}
+
+/* Изменяем отступ у 'времени' в зависимости от количества символов */
+.event-card-days-after[data-width='3'] {
+    right: -51px;
+}
+
+.event-card-days-after[data-width='4'] {
+    right: -68px;
+}
+
+.event-card-minutes-after[data-width='5'] {
+    right: -85px;
+}
+
+.event-card-minutes-after[data-width='6'] {
+    right: -102px;
+}
+
+.event-card-hours-before[data-width='3'] {
+    left: -51px;
+}
+
+.event-card-hours-before[data-width='4'] {
+    left: -68px;
+}
+
+.event-card-hours-before[data-width='5'] {
+    left: -85px;
+}
+
+.event-card-seconds-before[data-width='6'] {
+    left: -102px;
+}
+
+.event-card-seconds-before[data-width='7'] {
+    left: -119px;
+}

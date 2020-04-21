@@ -1,13 +1,14 @@
 .preview-card {
     display: flex;
     flex-direction: column;
-    width: 95%;
+    width: 90%;
     height: 200px;
     border-radius: 20px;
     justify-content: space-between;
-    padding: 10px;
-}
+    padding: 15px;
 
+    box-shadow: -1px 0 15px 0 rgba(34, 60, 80, 0.3);
+}
 .date-inline{
     display: flex;
     align-items: flex-end;
@@ -20,14 +21,14 @@
 
 
 /* background */
-.preview-card.preview-card-blue-theme {
-    background-image: url('../../static/blue-theme.jpg');
+.preview-card.preview-card-blue-gradient {
+    background-image: url('../../static/blue-gradient.jpg');
 }
 
-.preview-card.preview-card-red-theme {
-    background-image: url('../../static/red-theme.jpg');
+.preview-card.preview-card-red-gradient {
+    background-image: url('../../static/red-gradient.jpg');
 }
 
-.preview-card.preview-card-violet-theme {
-    background-image: url('../../static/violet-theme.jpg');
+.preview-card.preview-card-violet-gradient {
+    background-image: url('../../static/violet-gradient.jpg');
 }
