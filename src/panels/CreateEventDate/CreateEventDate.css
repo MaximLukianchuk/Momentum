@@ -16,3 +16,52 @@
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
+.create-event-date-wrapper .time-picker {
+    cursor: pointer;
+    display: flex;
+    margin: 0 auto 20px auto;
+    align-items: center;
+    width: fit-content;
+}
+
+.create-event-date-wrapper .time-picker .time-picker-text {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.create-event-date-modal {
+    width: 200px;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.create-event-date-modal .button {
+    display: block;
+    margin: 10px auto;
+    background-color: var(--black);
+    width: 185px;
+    height: 48px;
+    border-radius: 18px;
+}
+
+
+/* overriding library styles */
+.create-event-date-wrapper .datepicker-col-1:nth-child(2) .datepicker-scroll {
+    text-align: start;
+    margin-left: 5px;
+}
+
+#create_event_date .datepicker {
+    position: relative;
+    background: transparent;
+}
+
+#create_event_date .datepicker .datepicker-viewport::after {
+    background: transparent;
+}
+
+#create_event_date .datepicker .datepicker-content {
+    padding: 0;
+}

@@ -2,8 +2,6 @@ import React from 'react';
 import { IOS, ANDROID, platform } from '@vkontakte/vkui';
 import * as BaseDatePicker from 'react-mobile-datepicker';
 
-import './DatePicker.css';
-
 const osName = platform();
 const datePickerTheme = osName === IOS ? 'ios' : osName === ANDROID ? 'android' : 'default';
 
@@ -64,4 +62,4 @@ const DatePicker = ({ exactTime, ...props }) => (
     />
 );
 
-export default DatePicker
+export default DatePicker;

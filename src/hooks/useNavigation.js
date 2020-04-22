@@ -30,11 +30,16 @@ export const useNavigation = initialPanel => {
         setHistory(hist);
         setActivePanel(to);
     };
+    
+    const clearHistory = () => {
+        setHistory([initialPanel])
+    };
 
     return {
         activePanel,
         history,
         goForward,
-        goBack
+        goBack,
+        clearHistory
     }
 };
