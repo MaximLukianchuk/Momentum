@@ -7,6 +7,9 @@ import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
 import Event from './panels/Event';
+import CreateEventName from './panels/CreateEventName';
+import CreateEventDate from './panels/CreateEventDate';
+import CreateEventTheme from './panels/CreateEventTheme';
 import { useNavigation } from './hooks/useNavigation';
 import { loadEvents, LoadingState } from './store/actions/events';
 
@@ -15,9 +18,9 @@ import './App.css';
 
 const App = () => {
     const dispatch = useDispatch();
-    const { events, loadingState } = useSelector(state => state);
+    const { events, loadingState } = useSelector(({ events }) => events);
     const [popout, setPopout] = useState(<ScreenSpinner size='large'/>);
-    const { activePanel, history, goForward, goBack } = useNavigation('home');
+    const { activePanel, history, goForward, goBack, clearHistory } = useNavigation('home');
     const [currentEventId, setCurrentEventId] = useState(null);
     
     useEffect(() => {
@@ -41,6 +44,9 @@ const App = () => {
             >
                 <Home id='home' fetchedEvents={events} goForward={goForward} setEvent={setCurrentEventId}/>
                 <Event id='event' goBack={goBack} eventId={currentEventId}/>
+                <CreateEventName id='create_event_name' goForward={goForward} goBack={goBack}/>
+                <CreateEventDate id='create_event_date' goForward={goForward} goBack={goBack}/>
+                <CreateEventTheme id='create_event_theme' goForward={goForward} goBack={goBack} clearHistory={clearHistory}/>
             </View>
         </ConfigProvider>
     );

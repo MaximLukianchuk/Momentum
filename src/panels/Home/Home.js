@@ -3,6 +3,7 @@ import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import List from '@vkontakte/vkui/dist/components/List/List';
 import Button from '@vkontakte/vkui/dist/components/Button/Button';
+import FixedLayout from '@vkontakte/vkui/dist/components/FixedLayout/FixedLayout';
 import Icon28AddOutline from '@vkontakte/icons/dist/28/add_outline';
 import bridge from '@vkontakte/vk-bridge';
 
@@ -44,7 +45,14 @@ const Home = ({ id, goForward, fetchedEvents, setEvent }) => {
                     }
                 </List>
             </Group>
-            <Button className='add-button' before={<Icon28AddOutline/>}/>
+            <FixedLayout vertical='bottom'>
+                <Button
+                    className='add-button'
+                    before={<Icon28AddOutline/>}
+                    onClick={goForward}
+                    data-to='create_event_name'
+                />
+            </FixedLayout>
         </Panel>
     );
 };

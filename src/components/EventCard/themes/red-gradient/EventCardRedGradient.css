@@ -1,3 +1,4 @@
 .Panel.event-panel.event-panel-red-gradient .Panel__in {
     background-image: url('../../../../static/red-gradient.jpg');
+    background-position-y: 25%;
 }

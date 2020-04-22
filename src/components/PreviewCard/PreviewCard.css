@@ -23,12 +23,15 @@
 /* background */
 .preview-card.preview-card-blue-gradient {
     background-image: url('../../static/blue-gradient.jpg');
+    background-position-y: center;
 }
 
 .preview-card.preview-card-red-gradient {
     background-image: url('../../static/red-gradient.jpg');
+    background-position-y: 25%;
 }
 
 .preview-card.preview-card-violet-gradient {
     background-image: url('../../static/violet-gradient.jpg');
+    background-position-y: center;
 }

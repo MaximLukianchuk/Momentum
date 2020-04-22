@@ -1,0 +1,21 @@
+.modal-wrapper {
+    display: block;
+    right: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    bottom: 0;
+    background: rgba(121, 125, 116, 0.9);
+}
+
+.modal-content {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.modal-wrapper.hidden {
+    display: none;
+}

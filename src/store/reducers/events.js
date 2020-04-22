@@ -5,7 +5,7 @@ import { EventsActionTypes, LoadingState } from '../actions/events';
 const initialState = {
     events: [],
     loadingState: LoadingState.NotLoaded
-}
+};
 
 export const eventsReducer = produce((draft, action) => {
     if (!action) {
@@ -17,6 +17,10 @@ export const eventsReducer = produce((draft, action) => {
     switch (action.type) {
         case EventsActionTypes.SET_EVENTS:
             draft.events = payload.events;
+            break;
+    
+        case EventsActionTypes.ADD_EVENT:
+            draft.events = [...draft.events, payload.event];
             break;
 
         case EventsActionTypes.SET_LOADING_STATE:

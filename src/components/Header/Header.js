@@ -9,9 +9,9 @@ import Text from '../Text';
 
 import './Header.css'
 
-const Header = ({ osName, goBack, color, text, edit }) => {
+const Header = ({ className, osName, goBack, color, text, edit }) => {
     return (
-        <div className={cn(['header-wrapper', `header-wrapper-${color}`])}>
+        <div className={cn(['header-wrapper', `header-wrapper-${color}`, className])}>
             {
                 goBack && (
                     <PanelHeaderButton onClick={goBack} data-to='home' className='header-button'>
@@ -20,10 +20,10 @@ const Header = ({ osName, goBack, color, text, edit }) => {
                 )
             }
             {
-                text && <Text className='header-text' font='body2' bold>{text}</Text>
+                text && <Text className='header-text' font='body3' bold>{text}</Text>
             }
             {
-                edit && <Text className='header-edit' font={'body3'} bold>Редактировать</Text>
+                edit && <Text className='header-edit' font='body3' bold>Редактировать</Text>
             }
         </div>
     )
