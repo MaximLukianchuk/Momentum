@@ -38,7 +38,7 @@ const CreateEventName = ({ id, goForward, goBack }) => {
             date.setMinutes(0);
         }
         
-        dispatch(setEventDate(date));
+        dispatch(setEventDate(date.getTime()));
         goForward(props);
     };
     const handleChooseDateClick = () => {

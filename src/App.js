@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import bridge from '@vkontakte/vk-bridge';
 import View from '@vkontakte/vkui/dist/components/View/View';
 import ConfigProvider from '@vkontakte/vkui/dist/components/ConfigProvider/ConfigProvider';
 import ScreenSpinner from '@vkontakte/vkui/dist/components/ScreenSpinner/ScreenSpinner';
@@ -22,9 +23,15 @@ const App = () => {
     const [popout, setPopout] = useState(<ScreenSpinner size='large'/>);
     const { activePanel, history, goForward, goBack, clearHistory } = useNavigation('home');
     const [currentEventId, setCurrentEventId] = useState(null);
+    const [userId, setUserId] = useState(null);
     
     useEffect(() => {
-        dispatch(loadEvents());
+        async function fetchData() {
+            const { id } = await bridge.send('VKWebAppGetUserInfo');
+            setUserId(id)
+            dispatch(loadEvents(id))
+        }
+        fetchData();
     }, [dispatch]);
     
     useEffect(() => {
@@ -46,7 +53,13 @@ const App = () => {
                 <Event id='event' goBack={goBack} eventId={currentEventId}/>
                 <CreateEventName id='create_event_name' goForward={goForward} goBack={goBack}/>
                 <CreateEventDate id='create_event_date' goForward={goForward} goBack={goBack}/>
-                <CreateEventTheme id='create_event_theme' goForward={goForward} goBack={goBack} clearHistory={clearHistory}/>
+                <CreateEventTheme
+                    id='create_event_theme'
+                    goForward={goForward}
+                    goBack={goBack}
+                    clearHistory={clearHistory}
+                    userId={userId}
+                />
             </View>
         </ConfigProvider>
     );
