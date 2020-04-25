@@ -37,7 +37,8 @@
     "react-mobile-datepicker": "^4.0.2",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "shortid": "^2.2.15"
   },
   "browserslist": {
     "production": [

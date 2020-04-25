@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import cn from 'classnames';
+import { generate as generateId } from 'shortid';
 import { platform } from '@vkontakte/vkui';
 import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
@@ -22,7 +23,7 @@ const themes = [
     'violet-gradient'
 ];
 
-const CreateEventTheme = ({ id, goForward, goBack, clearHistory }) => {
+const CreateEventTheme = ({ id, goForward, goBack, clearHistory, userId }) => {
     const dispatch = useDispatch();
     const newEvent = useSelector(({ newEvent: { newEvent } }) => newEvent);
     const [selected, setSelected] = useState('red-gradient');
@@ -30,7 +31,7 @@ const CreateEventTheme = ({ id, goForward, goBack, clearHistory }) => {
         theme && setSelected(theme);
     };
     const handleClick = props => {
-        dispatch(createEvent({...newEvent, theme: selected}));
+        dispatch(createEvent(userId, {...newEvent, theme: selected, id: generateId() }));
         dispatch(clearNewEvent());
         goForward(props);
         clearHistory();
