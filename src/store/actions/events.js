@@ -33,27 +33,28 @@ export const setEventsLoadingState = loadingState => ({
 });
 
 export const loadEvents = id => dispatch => {
-	dispatch(setEventsLoadingState(LoadingState.Loading));
+    dispatch(setEventsLoadingState(LoadingState.Loading));
 
-	fetch(`https://momentum-server.ru/user/${id}`)
-		.then(res => res.json())
-		.then(({ events }) => {
-			dispatch(setEvents(events));
-			dispatch(setEventsLoadingState(LoadingState.Loaded));
-		})
-		.catch(err => {
-			console.error(err);
-			dispatch(setEventsLoadingState(LoadingState.Errored));
-		});
+    fetch(`${process.env.REACT_APP_LOCAL_URL || process.env.REACT_APP_PUBLIC_URL}/user/${id}/${process.env.REACT_APP_API_TOKEN}`)
+        .then(res => res.json())
+        .then(({ events }) => {
+            dispatch(setEvents(events));
+            dispatch(setEventsLoadingState(LoadingState.Loaded));
+        })
+        .catch(err => {
+            console.log(err);
+            dispatch(setEventsLoadingState(LoadingState.Errored));
+        });
 };
 
 export const createEvent = (id, event) => dispatch => {
-	dispatch(addEvent(event));
-	fetch(`https://momentum-server.ru/user/${id}/add_event`, {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify({ event }),
-	});
+    dispatch(addEvent(event));
+
+    fetch(`${process.env.REACT_APP_LOCAL_URL || process.env.REACT_APP_PUBLIC_URL}/user/${id}/${process.env.REACT_APP_API_TOKEN}/add_event`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ event }),
+    })
 };
