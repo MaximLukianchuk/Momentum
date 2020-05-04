@@ -13,48 +13,42 @@ import PreviewCard from '../../components/PreviewCard';
 import './Home.css';
 
 const Home = ({ id, goForward, fetchedEvents, setEvent }) => {
-    const combineHandlers = (e, id) => {
-        goForward(e);
-        setEvent(id);
-        bridge.send('VKWebAppTapticImpactOccurred', { 'style': 'heavy' });
-    };
-    
-    return (
-        <Panel id={id} separator={false}>
-            <HeaderTitle
-                className='home-header'
-                color='softBlue'
-                font='h1'
-                bold
-            >
-                Мои События
-            </HeaderTitle>
-            <Group title='Events'>
-                <List>
-                    {
-                        fetchedEvents && fetchedEvents.map(({ id, name, date, theme }) => (
-                            <PreviewCard
-                                key={`event-${id}`}
-                                id={id}
-                                name={name}
-                                date={date}
-                                theme={theme}
-                                onPreviewCardClick={combineHandlers}
-                            />
-                        ))
-                    }
-                </List>
-            </Group>
-            <FixedLayout vertical='bottom'>
-                <Button
-                    className='add-button'
-                    before={<Icon28AddOutline/>}
-                    onClick={goForward}
-                    data-to='create_event_name'
-                />
-            </FixedLayout>
-        </Panel>
-    );
+	const combineHandlers = (e, id) => {
+		goForward(e);
+		setEvent(id);
+		bridge.send('VKWebAppTapticImpactOccurred', { style: 'heavy' });
+	};
+
+	return (
+		<Panel id={id} separator={false}>
+			<HeaderTitle className='home-header' color='softBlue' font='h1' bold>
+				Мои События
+			</HeaderTitle>
+			<Group title='Events'>
+				<List>
+					{fetchedEvents &&
+						fetchedEvents.map(({ id, name, date, theme }) => (
+							<PreviewCard
+								key={`event-${id}`}
+								id={id}
+								name={name}
+								date={date}
+								theme={theme}
+								onPreviewCardClick={combineHandlers}
+							/>
+						))}
+				</List>
+			</Group>
+			<FixedLayout vertical='bottom'>
+				<Button
+					className='add-button'
+					before={<Icon28AddOutline />}
+					onClick={goForward}
+					data-to='create_event_name'
+				/>
+			</FixedLayout>
+		</Panel>
+	);
 };
 
 export default Home;

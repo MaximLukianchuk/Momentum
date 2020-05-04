@@ -13,29 +13,29 @@ import { useTimer } from '../../hooks/useTimer';
 import './EventCard.css';
 
 const themes = {
-    'blue-gradient': EventCardBlueGradient,
-    'red-gradient': EventCardRedGradient,
-    'violet-gradient': EventCardVioletGradient,
+	'blue-gradient': EventCardBlueGradient,
+	'red-gradient': EventCardRedGradient,
+	'violet-gradient': EventCardVioletGradient
 };
 
 const ThemedContent = ({ theme, ...props }) => createElement(themes[theme], props);
 
 const EventCard = ({ name, date, theme }) => {
-    const { time, ...moments } = useTimer(date);
-    const timeMoments = getParsedTime(moments);
-    const fontSize = getCorrectFontSize(timeMoments);
-    
-    return (
-        <div className={cn(['event-card-wrapper'])}>
-            <Text color='white' font='body2' bold>{time === 'future' ? 'До' : 'C'}: {name}</Text>
-            <Text color='transparent' font='body3'>{getReadableDate(date)}</Text>
-            <ThemedContent
-                theme={theme}
-                fontSize={fontSize}
-                {...timeMoments}
-            />
-        </div>
-    );
+	const { time, ...moments } = useTimer(date);
+	const timeMoments = getParsedTime(moments);
+	const fontSize = getCorrectFontSize(timeMoments);
+
+	return (
+		<div className={cn(['event-card-wrapper'])}>
+			<Text color='white' font='body2' bold>
+				{time === 'future' ? 'До' : 'C'}: {name}
+			</Text>
+			<Text color='transparent' font='body3'>
+				{getReadableDate(date)}
+			</Text>
+			<ThemedContent theme={theme} fontSize={fontSize} {...timeMoments} />
+		</div>
+	);
 };
 
 export default EventCard;

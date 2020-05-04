@@ -1,42 +1,41 @@
 .event-card-example {
-    position: relative;
-    width: 150px;
-    height: 270px;
-    border-radius: 20px;
-    background-size: cover;
-    background-position-y: top;
+	position: relative;
+	width: 150px;
+	height: 270px;
+	border-radius: 20px;
+	background-size: cover;
+	background-position-y: top;
 }
 
 .event-card-example .selected {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(116, 113, 105, 0.6);
-    border-radius: 20px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(116, 113, 105, 0.6);
+	border-radius: 20px;
 }
 
 .event-card-example .done-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: solid 2px white;
-    border-radius: 15px;
-    padding: 5px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: solid 2px white;
+	border-radius: 15px;
+	padding: 5px;
 }
-
 
 /* background */
 .event-card-example.event-card-example-blue-gradient {
-    background-image: url('../../static/blue-gradient-example.png');
+	background-image: url('../../static/blue-gradient-example.png');
 }
 
 .event-card-example.event-card-example-red-gradient {
-    background-image: url('../../static/red-gradient-example.png');
+	background-image: url('../../static/red-gradient-example.png');
 }
 
 .event-card-example.event-card-example-violet-gradient {
-    background-image: url('../../static/violet-gradient-example.png');
+	background-image: url('../../static/violet-gradient-example.png');
 }

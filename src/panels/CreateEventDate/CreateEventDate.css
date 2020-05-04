@@ -1,67 +1,69 @@
 .create-event-date-wrapper .create-event-date-title {
-    padding-top: 45%;
-    padding-left: 18px;
+	padding-top: 45%;
+	padding-left: 18px;
 }
 
 .create-event-date-wrapper .create-event-date-button {
-    display: block;
-    margin: auto;
-    background-color: var(--black);
-    width: 185px;
-    height: 48px;
-    border-radius: 18px;
+	display: block;
+	margin: auto;
+	background-color: var(--black);
+	width: 185px;
+	height: 48px;
+	border-radius: 18px;
 }
 
 .create-event-date-wrapper .datepicker {
-    margin-top: 10px;
-    margin-bottom: 20px;
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 
 .create-event-date-wrapper .time-picker {
-    cursor: pointer;
-    display: flex;
-    margin: 0 auto 20px auto;
-    align-items: center;
-    width: fit-content;
+	cursor: pointer;
+	display: flex;
+	margin: 0 auto 20px auto;
+	align-items: center;
+	width: fit-content;
 }
 
 .create-event-date-wrapper .time-picker .time-picker-text {
-    margin-left: 5px;
-    margin-right: 10px;
+	margin-left: 5px;
+	margin-right: 10px;
 }
 
 .create-event-date-modal {
-    width: 200px;
-    background: white;
-    border-radius: 20px;
-    padding: 20px;
+	width: 200px;
+	background: white;
+	border-radius: 20px;
+	padding: 20px;
 }
 
 .create-event-date-modal .button {
-    display: block;
-    margin: 10px auto;
-    background-color: var(--black);
-    width: 185px;
-    height: 48px;
-    border-radius: 18px;
+	display: block;
+	margin: 10px auto;
+	background-color: var(--black);
+	width: 185px;
+	height: 48px;
+	border-radius: 18px;
 }
-
 
 /* overriding library styles */
 .create-event-date-wrapper .datepicker-col-1:nth-child(2) .datepicker-scroll {
-    text-align: start;
-    margin-left: 5px;
+	text-align: start;
+	margin-left: 5px;
 }
 
-#create_event_date .datepicker {
-    position: relative;
-    background: transparent;
+.create-event-date-wrapper .datepicker,
+.create-event-date-modal .datepicker {
+	position: relative;
+	background: transparent;
 }
 
-#create_event_date .datepicker .datepicker-viewport::after {
-    background: transparent;
+.create-event-date-wrapper .datepicker .datepicker-viewport::after,
+.create-event-date-modal .datepicker .datepicker-viewport::after {
+	background: transparent;
 }
 
-#create_event_date .datepicker .datepicker-content {
-    padding: 0;
+.create-event-date-wrapper .datepicker .datepicker-content,
+.create-event-date-modal .datepicker .datepicker-viewport::after {
+	padding: 0;
 }

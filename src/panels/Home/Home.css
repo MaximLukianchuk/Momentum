@@ -1,31 +1,29 @@
 .header-title-wrapper {
-    padding-top: 100px;
-    padding-bottom: 0;
+	padding-top: 100px;
+	padding-bottom: 0;
 }
 
 .header-title-wrapper .home-header {
-    word-spacing: 9999px;
-    margin-left: 12px;
+	word-spacing: 9999px;
+	margin-left: 12px;
 }
 
 .preview-card-wrapper .preview-card {
-    margin: auto;
+	margin: auto;
 }
 
 .add-button {
-    margin-left: 82%;
-    margin-bottom: 10%;
-    background-color: var(--black);
-    width: 50px;
-    height: 50px;
-    border-radius: 20px;
+	margin-left: 82%;
+	margin-bottom: 10%;
+	background-color: var(--black);
+	width: 50px;
+	height: 50px;
+	border-radius: 20px;
 }
-
 
 /* overriding library styles */
-.Button__in, .Button__before, .Icon, .List {
-    margin: 0 !important;
-}
-.List > .Cell .Cell__main {
-    padding-top: 0 !important;
+.Group[title=Events] .List,
+.Button__before .Icon,
+.Button__in .Button__before {
+	margin: 0;
 }

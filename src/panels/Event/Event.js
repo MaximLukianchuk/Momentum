@@ -11,14 +11,18 @@ import EventCard from '../../components/EventCard/EventCard';
 const osName = platform();
 
 const Event = ({ id, goBack, eventId }) => {
-    const [event] = useSelector(({ events: { events } }) => events.filter(e => e.id === eventId));
-    
-    return (
-        <Panel id={id} separator={false} className={cn(['event-panel', `event-panel-${event.theme}`])}>
-            <Header osName={osName} goBack={goBack} color='white' edit/>
-            <EventCard {...event}/>
-        </Panel>
-    );
+	const [event] = useSelector(({ events: { events } }) => events.filter(e => e.id === eventId));
+
+	return (
+		<Panel
+			id={id}
+			separator={false}
+			className={cn(['event-panel', `event-panel-${event.theme}`])}
+		>
+			<Header osName={osName} goBack={goBack} color='white' edit />
+			<EventCard {...event} />
+		</Panel>
+	);
 };
 
 export default Event;
