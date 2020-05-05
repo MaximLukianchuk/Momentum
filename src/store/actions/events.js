@@ -38,7 +38,7 @@ export const loadEvents = id => dispatch => {
 	fetch(
 		`${process.env.REACT_APP_LOCAL_URL || process.env.REACT_APP_PUBLIC_URL}/user/${id}/${
 			process.env.REACT_APP_API_TOKEN
-		}`
+		}/${window.location.search}`
 	)
 		.then(res => res.json())
 		.then(({ events }) => {
@@ -57,7 +57,7 @@ export const createEvent = (id, event) => dispatch => {
 	fetch(
 		`${process.env.REACT_APP_LOCAL_URL || process.env.REACT_APP_PUBLIC_URL}/user/${id}/${
 			process.env.REACT_APP_API_TOKEN
-		}/add_event`,
+		}/add_event/${window.location.search}`,
 		{
 			method: 'POST',
 			headers: {
