@@ -5,8 +5,8 @@ import { newEventReducer } from './reducers/newEvent';
 import { getMiddleware } from './middleware';
 
 const rootReducer = combineReducers({
-    events: eventsReducer,
-    newEvent: newEventReducer
+	events: eventsReducer,
+	newEvent: newEventReducer,
 });
 
 export const getStore = () => createStore(rootReducer, getMiddleware());

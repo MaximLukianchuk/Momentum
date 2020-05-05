@@ -16,45 +16,47 @@ import './CreateEventName.css';
 const osName = platform();
 
 const CreateEventName = ({ id, goForward, goBack }) => {
-    const dispatch = useDispatch();
-    const [name, setName] = useState('');
-    const handleChange = ({ target: { value } }) => setName(value);
-    const inputRef = useRef(null);
-    
-    const handleClick = props => {
-        dispatch(setEventName(name || 'Назови Меня'));
-        goForward(props);
-    };
-    
-    useEffect(() => {
-        const inputNode = inputRef.current;
-        inputNode.focus();
-    }, [inputRef]);
-    
-    return (
-        <Panel id={id} separator={false}>
-            <Header osName={osName} goBack={goBack} color='black'/>
-            <Div className={cn(['create-event-name-wrapper'])}>
-                <Text className='create-event-name-title' color='black' font='body3' bold>Название события:</Text>
-                <Input
-                    className='create-event-name-input'
-                    placeholder='Назови Меня'
-                    onChange={handleChange}
-                    value={name}
-                    font='h3'
-                    color='softBlue'
-                    ref={inputRef}
-                />
-                <Button
-                    className='create-event-name-button'
-                    onClick={handleClick}
-                    data-to='create_event_date'
-                >
-                    Готово
-                </Button>
-            </Div>
-        </Panel>
-    );
+	const dispatch = useDispatch();
+	const [name, setName] = useState('');
+	const handleChange = ({ target: { value } }) => setName(value);
+	const inputRef = useRef(null);
+
+	const handleClick = props => {
+		dispatch(setEventName(name || 'Назови Меня'));
+		goForward(props);
+	};
+
+	useEffect(() => {
+		const inputNode = inputRef.current;
+		inputNode.focus();
+	}, [inputRef]);
+
+	return (
+		<Panel id={id} separator={false}>
+			<Header osName={osName} goBack={goBack} color='black' />
+			<Div className={cn(['create-event-name-wrapper'])}>
+				<Text className='create-event-name-title' color='black' font='body3' bold>
+					Название события:
+				</Text>
+				<Input
+					className='create-event-name-input'
+					placeholder='Назови Меня'
+					onChange={handleChange}
+					value={name}
+					font='h3'
+					color='softBlue'
+					ref={inputRef}
+				/>
+				<Button
+					className='create-event-name-button'
+					onClick={handleClick}
+					data-to='create_event_date'
+				>
+					Готово
+				</Button>
+			</Div>
+		</Panel>
+	);
 };
 
 export default CreateEventName;

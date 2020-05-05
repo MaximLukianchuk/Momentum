@@ -1,19 +1,19 @@
 .create-event-theme-wrapper .create-event-theme-title {
-    padding-left: 18px;
+	padding-left: 18px;
 }
 
 .create-event-theme-wrapper .example-cards-container {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    justify-content: space-around;
-    row-gap: 40px;
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	justify-content: space-around;
+	row-gap: 40px;
 }
 
 .create-event-theme-wrapper .create-event-theme-button {
-    display: block;
-    margin: 0 auto 20% auto;
-    background-color: var(--black);
-    width: 185px;
-    height: 48px;
-    border-radius: 18px;
+	display: block;
+	margin: 0 auto 20% auto;
+	background-color: var(--black);
+	width: 185px;
+	height: 48px;
+	border-radius: 18px;
 }

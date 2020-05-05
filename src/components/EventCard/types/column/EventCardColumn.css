@@ -1,9 +1,9 @@
 .event-card-time.event-card-time-column {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 .event-card-time.event-card-time-column > * {
-    margin-right: 15px;
+	margin-right: 15px;
 }
