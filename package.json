@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage":"https://marksmirnov13.github.io/Momentum"
+  "homepage":"https://marksmirnov13.github.io/Momentum",
   "scripts": {
     "start": "cross-env PORT=10888 HTTPS=true react-scripts start",
     "lint": "eslint src/",
