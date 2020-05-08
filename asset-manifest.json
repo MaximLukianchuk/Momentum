@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Momentum/static/css/main.5ddfe944.chunk.css",
+    "main.js": "/Momentum/static/js/main.729d2b62.chunk.js",
+    "main.js.map": "/Momentum/static/js/main.729d2b62.chunk.js.map",
+    "runtime-main.js": "/Momentum/static/js/runtime-main.cd8320be.js",
+    "runtime-main.js.map": "/Momentum/static/js/runtime-main.cd8320be.js.map",
+    "static/css/2.47f050ad.chunk.css": "/Momentum/static/css/2.47f050ad.chunk.css",
+    "static/js/2.51e2b2e3.chunk.js": "/Momentum/static/js/2.51e2b2e3.chunk.js",
+    "static/js/2.51e2b2e3.chunk.js.map": "/Momentum/static/js/2.51e2b2e3.chunk.js.map",
+    "index.html": "/Momentum/index.html",
+    "precache-manifest.382e9df814f49b874af6a24120f9416c.js": "/Momentum/precache-manifest.382e9df814f49b874af6a24120f9416c.js",
+    "service-worker.js": "/Momentum/service-worker.js",
+    "static/css/2.47f050ad.chunk.css.map": "/Momentum/static/css/2.47f050ad.chunk.css.map",
+    "static/css/main.5ddfe944.chunk.css.map": "/Momentum/static/css/main.5ddfe944.chunk.css.map",
+    "static/js/2.51e2b2e3.chunk.js.LICENSE.txt": "/Momentum/static/js/2.51e2b2e3.chunk.js.LICENSE.txt",
+    "static/media/EditEvent.css": "/Momentum/static/media/violet-gradient-example.a57be422.png",
+    "static/media/EventCardBlueGradient.css": "/Momentum/static/media/blue-gradient.aec90375.jpg",
+    "static/media/EventCardRedGradient.css": "/Momentum/static/media/red-gradient.e5917570.jpg",
+    "static/media/EventCardVioletGradient.css": "/Momentum/static/media/violet-gradient.16e7ac8e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cd8320be.js",
+    "static/css/2.47f050ad.chunk.css",
+    "static/js/2.51e2b2e3.chunk.js",
+    "static/css/main.5ddfe944.chunk.css",
+    "static/js/main.729d2b62.chunk.js"
+  ]
+}
