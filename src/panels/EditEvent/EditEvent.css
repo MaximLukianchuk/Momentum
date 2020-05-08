@@ -1,0 +1,74 @@
+.edit-event-wrapper .edit-event-button {
+    display: block;
+    margin: 0 auto 20% auto;
+    background-color: var(--tomato);
+    width: 185px;
+    height: 48px;
+    border-radius: 18px;
+}
+
+.edit-event-wrapper .edit-cell .edit-icon svg {
+    border-radius: 10px;
+    padding: 3px;
+    margin-top: -1.5px;
+}
+
+.edit-event-wrapper .edit-cell svg {
+    color: var(--black);
+}
+
+.edit-event-wrapper .edit-cell.edit-name .edit-icon svg {
+    background-color: var(--sea);
+}
+
+.edit-event-wrapper .edit-cell.edit-date .edit-icon svg {
+    background-color: var(--wave);
+}
+
+.edit-event-wrapper .edit-cell.edit-notifications .edit-icon svg {
+    background-color: var(--grass);
+}
+
+.edit-event-wrapper .edit-cell.edit-theme .edit-icon svg {
+    background-color: var(--sand);
+}
+
+.edit-event-wrapper .edit-cell.edit-theme .Tappable {
+    height: 280px;
+    position: relative;
+}
+
+.edit-event-wrapper .edit-cell.edit-theme .Tappable .Cell__before,
+.edit-event-wrapper .edit-cell.edit-theme .Tappable .Cell__main {
+    align-self: flex-start;
+}
+
+.edit-event-wrapper .edit-cell.edit-theme .Tappable::after {
+    position: absolute;
+    content: '';
+    width: 105px;
+    height: 189px;
+    left: 80px;
+    top: 50px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position-y: top;
+}
+
+.edit-event-wrapper .edit-cell.edit-theme.theme-blue-gradient .Tappable::after {
+    background-image: url('../../static/blue-gradient-example.png');
+}
+
+.edit-event-wrapper .edit-cell.edit-theme.theme-red-gradient .Tappable::after {
+    background-image: url('../../static/red-gradient-example.png');
+}
+
+.edit-event-wrapper .edit-cell.edit-theme.theme-violet-gradient .Tappable::after {
+    background-image: url('../../static/violet-gradient-example.png');
+}
+
+.edit-event-button .button-container {
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+}

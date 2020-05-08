@@ -9,24 +9,21 @@ import Text from '../Text';
 
 import './Header.css';
 
-const Header = ({ className, osName, goBack, color, text, edit }) => (
-	<div className={cn(['header-wrapper', `header-wrapper-${color}`, className])}>
-		{goBack && (
-			<PanelHeaderButton onClick={goBack} data-to='home' className='header-button'>
-				{osName === IOS ? <Icon28ChevronBack /> : <Icon24Back />}
-			</PanelHeaderButton>
-		)}
-		{text && (
-			<Text className='header-text' font='body3' bold>
-				{text}
-			</Text>
-		)}
-		{edit && (
-			<Text className='header-edit' font='body3' bold>
-				Редактировать
-			</Text>
-		)}
-	</div>
-);
+const Header = ({ className, osName, goBack, color, text }) => {
+    return (
+        <div className={cn(['header-wrapper', `header-wrapper-${color}`, className])}>
+            {
+                goBack && (
+                    <PanelHeaderButton onClick={goBack} data-to='home' className='header-button'>
+                        { osName === IOS ? <Icon28ChevronBack/> : <Icon24Back/> }
+                    </PanelHeaderButton>
+                )
+            }
+            {
+                text && <Text className='header-text' font='body3' bold>{text}</Text>
+            }
+        </div>
+    );
+};
 
 export default Header;
