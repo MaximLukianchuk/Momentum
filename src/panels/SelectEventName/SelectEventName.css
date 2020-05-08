@@ -1,0 +1,19 @@
+.select-event-name-wrapper .select-event-name-title {
+    padding-top: 45%;
+    padding-left: 18px;
+}
+
+.select-event-name-wrapper .select-event-name-input {
+    padding-left: 13px;
+    padding-bottom: 45%;
+    width: 290px;
+}
+
+.select-event-name-wrapper .select-event-name-button {
+    display: block;
+    margin: auto;
+    background-color: var(--black);
+    width: 185px;
+    height: 48px;
+    border-radius: 18px;
+}

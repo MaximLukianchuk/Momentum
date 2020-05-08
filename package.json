@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage":"https://marksmirnov13.github.io/Momentum",
+  "homepage": "https://marksmirnov13.github.io/Momentum",
   "scripts": {
     "start": "cross-env PORT=10888 HTTPS=true react-scripts start",
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix",
     "stylelint": "stylelint src/**/*.css",
-  	"stylelint:fix": "stylelint src/**/*.css --fix",
+    "stylelint:fix": "stylelint src/**/*.css --fix",
     "precommit": "lint-staged",
     "build": "react-scripts build",
     "predeploy": "npm run build",
@@ -81,10 +81,10 @@
   },
   "lint-staged": {
     "*.{js, jsx}": [
-	  "prettier --write",
-	  "git add",
+      "prettier --write",
+      "git add",
       "eslint src/"
     ],
-  	"*.{css}": "stylelint src/**/*.css"
+    "*.{css}": "stylelint src/**/*.css"
   }
 }

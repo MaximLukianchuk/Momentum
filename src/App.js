@@ -8,9 +8,10 @@ import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
 import Event from './panels/Event';
-import CreateEventName from './panels/CreateEventName';
-import CreateEventDate from './panels/CreateEventDate';
-import CreateEventTheme from './panels/CreateEventTheme';
+import SelectEventName from './panels/SelectEventName';
+import SelectEventDate from './panels/SelectEventDate';
+import SelectEventTheme from './panels/SelectEventTheme';
+import EditEvent from './panels/EditEvent';
 import { useNavigation } from './hooks/useNavigation';
 import { loadEvents, LoadingState } from './store/actions/events';
 
@@ -20,26 +21,28 @@ import './App.css';
 const App = () => {
 	const dispatch = useDispatch();
 	const { events, loadingState } = useSelector(({ events }) => events);
-	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
+	const [popout, setPopout] = useState(<ScreenSpinner size='large'/>);
 	const { activePanel, history, goForward, goBack, clearHistory } = useNavigation('home');
 	const [currentEventId, setCurrentEventId] = useState(null);
 	const [userId, setUserId] = useState(null);
-
+	const [currentEvent] = useSelector(({ events: { events } }) => events.filter(e => e.id === currentEventId));
+	
 	useEffect(() => {
 		async function fetchData() {
 			const { id } = await bridge.send('VKWebAppGetUserInfo');
 			setUserId(id);
 			dispatch(loadEvents(id));
 		}
+		
 		fetchData();
 	}, [dispatch]);
-
+	
 	useEffect(() => {
 		if (loadingState === LoadingState.Loaded) {
 			setPopout(null);
 		}
 	}, [loadingState]);
-
+	
 	return (
 		<ConfigProvider isWebView>
 			<View
@@ -55,15 +58,68 @@ const App = () => {
 					goForward={goForward}
 					setEvent={setCurrentEventId}
 				/>
-				<Event id='event' goBack={goBack} eventId={currentEventId} />
-				<CreateEventName id='create_event_name' goForward={goForward} goBack={goBack} />
-				<CreateEventDate id='create_event_date' goForward={goForward} goBack={goBack} />
-				<CreateEventTheme
+				
+				<Event
+					id='event'
+					goBack={goBack}
+					goForward={goForward}
+					eventId={currentEventId}
+				/>
+				
+				<SelectEventName
+					id='create_event_name'
+					goForward={goForward}
+					goBack={goBack}
+				/>
+				
+				<SelectEventDate
+					id='create_event_date'
+					goForward={goForward}
+					goBack={goBack}
+				/>
+				
+				<SelectEventTheme
 					id='create_event_theme'
 					goForward={goForward}
 					goBack={goBack}
 					clearHistory={clearHistory}
 					userId={userId}
+				/>
+				
+				<EditEvent
+					id='edit_event'
+					goForward={goForward}
+					goBack={goBack}
+					clearHistory={clearHistory}
+					eventId={currentEventId}
+					userId={userId}
+				/>
+				
+				<SelectEventName
+					id='update_event_name'
+					goForward={goForward}
+					goBack={goBack}
+					userId={userId}
+					event={currentEvent}
+					isUpdater
+				/>
+				
+				<SelectEventDate
+					id='update_event_date'
+					goForward={goForward}
+					goBack={goBack}
+					userId={userId}
+					event={currentEvent}
+					isUpdater
+				/>
+				
+				<SelectEventTheme
+					id='update_event_theme'
+					goForward={goForward}
+					goBack={goBack}
+					userId={userId}
+					event={currentEvent}
+					isUpdater
 				/>
 			</View>
 		</ConfigProvider>
