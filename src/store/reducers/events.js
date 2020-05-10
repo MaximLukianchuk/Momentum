@@ -20,7 +20,7 @@ export const eventsReducer = produce((draft, action) => {
 			break;
 		
 		case EventsActionTypes.ADD_EVENT:
-			draft.events.unshift(payload.event);
+			draft.events = [payload.event, ...draft.events];
 			break;
 		
 		case EventsActionTypes.REMOVE_EVENT:

@@ -29,7 +29,7 @@ const SelectEventName = ({ id, goForward, goBack, userId, event, isUpdater }) =>
             dispatch(updateEvent(userId, event.id, { name: eventName }));
             goBack();
         } else {
-            dispatch(setEventName(name));
+            dispatch(setEventName(eventName));
             goForward(props);
         }
     };
