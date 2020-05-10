@@ -22,7 +22,7 @@ import { getReadableDate } from '../../utils/getReadableDate';
 
 const osName = platform();
 
-const Event = ({ id, goBack, eventId, goForward, userId, setHistoryForce }) => {
+const EditEvent = ({ id, goBack, eventId, goForward, userId, setHistoryForce }) => {
     const dispatch = useDispatch();
     const [event] = useSelector(({ events: { events } }) => events.filter(e => e.id === eventId));
     const handleClick = props => {
@@ -88,4 +88,4 @@ const Event = ({ id, goBack, eventId, goForward, userId, setHistoryForce }) => {
     );
 };
 
-export default Event;
+export default EditEvent;
