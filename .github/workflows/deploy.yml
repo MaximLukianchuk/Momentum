@@ -22,6 +22,7 @@ jobs:
       env:
         REACT_APP_PUBLIC_URL: ${{ secrets.REACT_APP_PUBLIC_URL }}
         REACT_APP_API_TOKEN: ${{ secrets.REACT_APP_API_TOKEN }}
+        REACT_APP_URL: ${{ secrets.REACT_APP_URL }}
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3

@@ -6,9 +6,7 @@ import { EventCardBlueGradient } from './themes/blue-gradient/EventCardBlueGradi
 import { EventCardRedGradient } from './themes/red-gradient/EventCardRedGradient';
 import { EventCardVioletGradient } from './themes/violet-gradient/EventCardVioletGradient';
 import { getReadableDate } from '../../utils/getReadableDate';
-import { getParsedTime } from '../../utils/getParsedTime';
 import { getCorrectFontSize } from '../../utils/getCorrectFontSize';
-import { useTimer } from '../../hooks/useTimer';
 
 import './EventCard.css';
 
@@ -20,9 +18,7 @@ const themes = {
 
 const ThemedContent = ({ theme, ...props }) => createElement(themes[theme], props);
 
-const EventCard = ({ name, date, theme }) => {
-	const { time, ...moments } = useTimer(date);
-	const timeMoments = getParsedTime(moments);
+const EventCard = ({ name, date, time, timeMoments, theme }) => {
 	const fontSize = getCorrectFontSize(timeMoments);
 
 	return (
