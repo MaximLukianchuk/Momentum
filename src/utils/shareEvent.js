@@ -29,7 +29,7 @@ const getMessage = (time, name, { days, hours, minutes, seconds }) => {
 export const wallPostShare = (time, name, timeMoments) => {
 	bridge.send('VKWebAppShowWallPostBox', {
 		message: getMessage(time, name, timeMoments),
-		attachments: 'https://vk.com/app7409014'
+		attachments: process.env.REACT_APP_URL
 	});
 };
 
@@ -70,7 +70,7 @@ export const storyShare = (node, theme) => {
 								{
 									action_type: 'link',
 									action: {
-										link: 'https://vk.com/app7409014',
+										link: process.env.REACT_APP_URL,
 										tooltip_text_key: 'tooltip_open_app'
 									},
 									clickable_area: [

@@ -10,10 +10,10 @@ import Button from '@vkontakte/vkui/dist/components/Button/Button';
 import './FloatingActionButton.css';
 
 const FAB = ({ goForward, storyShareClosure, wallPostShareClosure }) => {
-	const [hide, setHide] = useState(false);
+	const [hidden, setHidden] = useState(false);
 
 	return (
-		<FixedLayout vertical='bottom' className={cn('container', { hide })}>
+		<FixedLayout vertical='bottom' className={cn('container', { hidden })}>
 			<Button className='buttons' before={<Icon24Share />} onClick={wallPostShareClosure} />
 			<Button className='buttons' before={<Icon24Story />} onClick={storyShareClosure} />
 			<Button
@@ -25,7 +25,7 @@ const FAB = ({ goForward, storyShareClosure, wallPostShareClosure }) => {
 			<Button
 				className='buttons'
 				before={<Icon24MoreHorizontal />}
-				onClick={() => setHide(!hide)}
+				onClick={() => setHidden(!hidden)}
 			/>
 		</FixedLayout>
 	);
