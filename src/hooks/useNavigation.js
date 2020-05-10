@@ -14,25 +14,21 @@ export const useNavigation = initialPanel => {
 			bridge.send('VKWebAppDisableSwipeBack');
 		}
 
-		setHistory(hist);
+		setHistory(hist => hist.slice(0, hist.length -1));
 		setActivePanel(panel);
 	};
 
 	const goForward = ({ currentTarget: { dataset: { to } } }) => {
-		const hist = [...history];
-
-		hist.push(to);
-
 		if (activePanel === initialPanel) {
 			bridge.send('VKWebAppEnableSwipeBack');
 		}
 
-		setHistory(hist);
+		setHistory(hist => [...hist, to]);
 		setActivePanel(to);
 	};
 
-	const clearHistory = () => {
-		setHistory([initialPanel]);
+	const setHistoryForce = hist => {
+		setHistory([...hist]);
 	};
 
 	return {
@@ -40,6 +36,6 @@ export const useNavigation = initialPanel => {
 		history,
 		goForward,
 		goBack,
-		clearHistory,
+		setHistoryForce,
 	};
 };

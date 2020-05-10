@@ -19,7 +19,7 @@ const osName = platform();
 
 const themes = ['red-gradient', 'blue-gradient', 'violet-gradient', 'green-gradient'];
 
-const SelectEventTheme = ({ id, goForward, goBack, clearHistory, userId, event, isUpdater }) => {
+const SelectEventTheme = ({ id, goForward, goBack, setHistoryForce, userId, event, setEventId, isUpdater }) => {
 	const dispatch = useDispatch();
 	const newEvent = useSelector(({ newEvent: { newEvent } }) => newEvent);
 	const [selected, setSelected] = useState(event ? event.theme : 'red-gradient');
@@ -37,10 +37,12 @@ const SelectEventTheme = ({ id, goForward, goBack, clearHistory, userId, event, 
 			dispatch(updateEvent(userId, event.id, { theme: selected }));
 			goBack();
 		} else {
-			dispatch(createEvent(userId, { ...newEvent, theme: selected, id: generateId() }));
+			const id = generateId();
+			dispatch(createEvent(userId, { ...newEvent, theme: selected, id }));
 			dispatch(clearNewEvent());
+			setEventId(id);
 			goForward(props);
-			clearHistory();
+			setHistoryForce(['home', 'event']);
 		}
 	};
 

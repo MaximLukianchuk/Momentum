@@ -22,7 +22,7 @@ const App = () => {
 	const dispatch = useDispatch();
 	const { events, loadingState } = useSelector(({ events }) => events);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large'/>);
-	const { activePanel, history, goForward, goBack, clearHistory } = useNavigation('home');
+	const { activePanel, history, goForward, goBack, setHistoryForce } = useNavigation('home');
 	const [currentEventId, setCurrentEventId] = useState(null);
 	const [userId, setUserId] = useState(null);
 	const [currentEvent] = useSelector(({ events: { events } }) => events.filter(e => e.id === currentEventId));
@@ -82,15 +82,16 @@ const App = () => {
 					id='create_event_theme'
 					goForward={goForward}
 					goBack={goBack}
-					clearHistory={clearHistory}
+					setHistoryForce={setHistoryForce}
 					userId={userId}
+					setEventId={setCurrentEventId}
 				/>
 				
 				<EditEvent
 					id='edit_event'
 					goForward={goForward}
 					goBack={goBack}
-					clearHistory={clearHistory}
+					setHistoryForce={setHistoryForce}
 					eventId={currentEventId}
 					userId={userId}
 				/>
