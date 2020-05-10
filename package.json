@@ -48,6 +48,7 @@
     "chalk": "^2.4.2",
     "classnames": "^2.2.6",
     "core-js": "^3.6.5",
+    "dom-to-image": "^2.6.0",
     "eruda": "^2.2.1",
     "eruda-code": "^2.0.0",
     "eruda-dom": "^2.0.0",
