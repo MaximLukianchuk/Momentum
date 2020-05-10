@@ -4,7 +4,8 @@ import domtoimage from 'dom-to-image';
 const mapBackground = {
 	'blue-gradient': 'linear-gradient(315deg, #738bdc 0%, #48c3eb 74%)',
 	'red-gradient': 'linear-gradient(315deg, #ee9617 0%, #fe5858 74%)',
-	'violet-gradient': 'linear-gradient(315deg, #42378f 0%, #f53844 74%)'
+	'violet-gradient': 'linear-gradient(315deg, #42378f 0%, #f53844 74%)',
+	'green-gradient': 'linear-gradient(315deg, #08e1ae 0%, #98de5b 74%)'
 };
 
 const getMessage = (time, name, { days, hours, minutes, seconds }) => {
