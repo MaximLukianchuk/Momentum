@@ -5,6 +5,7 @@ import Text from '../Text';
 import { EventCardBlueGradient } from './themes/blue-gradient/EventCardBlueGradient';
 import { EventCardRedGradient } from './themes/red-gradient/EventCardRedGradient';
 import { EventCardVioletGradient } from './themes/violet-gradient/EventCardVioletGradient';
+import { EventCardGreenGradient } from './themes/green-gradient/EventCardGreenGradient';
 import { getReadableDate } from '../../utils/getReadableDate';
 import { getCorrectFontSize } from '../../utils/getCorrectFontSize';
 
@@ -13,7 +14,8 @@ import './EventCard.css';
 const themes = {
 	'blue-gradient': EventCardBlueGradient,
 	'red-gradient': EventCardRedGradient,
-	'violet-gradient': EventCardVioletGradient
+	'violet-gradient': EventCardVioletGradient,
+	'green-gradient': EventCardGreenGradient
 };
 
 const ThemedContent = ({ theme, ...props }) => createElement(themes[theme], props);

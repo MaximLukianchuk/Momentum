@@ -56,15 +56,19 @@
 }
 
 .edit-event-wrapper .edit-cell.edit-theme.theme-blue-gradient .Tappable::after {
-    background-image: url('../../static/blue-gradient-example.png');
+    background-image: var(--blue-gradient-example);
 }
 
 .edit-event-wrapper .edit-cell.edit-theme.theme-red-gradient .Tappable::after {
-    background-image: url('../../static/red-gradient-example.png');
+    background-image: var(--red-gradient-example);
 }
 
 .edit-event-wrapper .edit-cell.edit-theme.theme-violet-gradient .Tappable::after {
-    background-image: url('../../static/violet-gradient-example.png');
+    background-image: var(--violet-gradient-example);
+}
+
+.edit-event-wrapper .edit-cell.edit-theme.theme-green-gradient .Tappable::after {
+	background-image: var(--green-gradient-example);
 }
 
 .edit-event-button .button-container {

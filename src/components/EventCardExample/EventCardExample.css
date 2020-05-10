@@ -29,13 +29,17 @@
 
 /* background */
 .event-card-example.event-card-example-blue-gradient {
-	background-image: url('../../static/blue-gradient-example.png');
+	background-image: var(--blue-gradient-example);
 }
 
 .event-card-example.event-card-example-red-gradient {
-	background-image: url('../../static/red-gradient-example.png');
+	background-image: var(--red-gradient-example);
 }
 
 .event-card-example.event-card-example-violet-gradient {
-	background-image: url('../../static/violet-gradient-example.png');
+	background-image: var(--violet-gradient-example);
+}
+
+.event-card-example.event-card-example-green-gradient {
+	background-image: var(--green-gradient-example);
 }

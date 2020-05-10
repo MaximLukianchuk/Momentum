@@ -1,0 +1,4 @@
+.Panel.event-panel.event-panel-green-gradient .Panel__in {
+	background-image: linear-gradient(315deg, #08e1ae 0%, #98de5b 74%);
+	background-position-y: center;
+}

@@ -1,4 +1,4 @@
 .Panel.event-panel.event-panel-blue-gradient .Panel__in {
-	background-image: url('../../../../static/blue-gradient.jpg');
+	background-image: linear-gradient(315deg, #738bdc 0%, #48c3eb 74%);
 	background-position-y: center;
 }
