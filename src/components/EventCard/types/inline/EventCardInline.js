@@ -5,7 +5,7 @@ import Text from '../../../Text';
 
 import './EventCardInline.css';
 
-const font = 'px Oswald, Serif';
+const font = 'px Rubik, sans-serif';
 
 export const EventCardInline = ({ days, hours, minutes, seconds, fontSize }) => {
 	return (
