@@ -65,7 +65,7 @@ const SelectEventTheme = ({ id, goForward, goBack, setHistoryForce, userId, even
 					<Button
 						className='select-event-theme-button'
 						onClick={handleClick}
-						data-to='home'
+						data-to='event'
 					>
 						Готово
 					</Button>
