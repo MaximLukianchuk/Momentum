@@ -52,8 +52,8 @@
 	margin-left: 5px;
 }
 
-.select-event-date-wrapper .datepicker,
-.select-event-date-modal .datepicker {
+.Panel .select-event-date-wrapper .datepicker,
+.Panel .select-event-date-modal .datepicker {
 	position: relative;
 	background: transparent;
 }
