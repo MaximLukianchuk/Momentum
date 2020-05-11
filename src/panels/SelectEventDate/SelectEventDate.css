@@ -58,12 +58,12 @@
 	background: transparent;
 }
 
-.select-event-date-wrapper .datepicker .datepicker-viewport::after,
-.select-event-date-modal .datepicker .datepicker-viewport::after {
+.Panel .select-event-date-wrapper .datepicker .datepicker-viewport::after,
+.Panel .select-event-date-modal .datepicker .datepicker-viewport::after {
 	background: transparent;
 }
 
-.select-event-date-wrapper .datepicker .datepicker-content,
-.select-event-date-modal .datepicker .datepicker-viewport::after {
+.Panel .select-event-date-wrapper .datepicker .datepicker-content,
+.Panel .select-event-date-modal .datepicker .datepicker-viewport::after {
 	padding: 0;
 }
